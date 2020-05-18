@@ -1,17 +1,32 @@
 package java_20200518;
 
 public class Calendar {
-	public int year;
-	public int month;
-	public int day;
+	private int year;
+	private int month;
+	private int day;
 
-	public void set(int y, int m, int d) {
-		year = y;
-		month = m;
-		day = d;
+	// year에 대한 setter 메서드
+	// setter 메서드를 이용하여 year를 변경
+	public void setYear(int year) {
+		this.year = year;
 	}
 
-	public int getCount() {
+	// year에 대한 getter 메서드
+	// getter 메서드를 이용하여 year를 가져옴
+	public int getYear() {
+		return year;
+	}
+
+	// this : 자기 자신 객체
+	// 로컬변수와 멤버변수와 구분할 때 사용
+	// ex> this.year=year;
+	public void set(int year, int month, int day) {
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
+
+	private int getCount() {
 		int totalCount = 0;
 
 		int preYear = year - 1;
@@ -69,9 +84,9 @@ public class Calendar {
 
 	}
 
-	public static void main(String[] args) {
-		Calendar c = new Calendar();
-		c.set(2020, 5, 18);
-		c.print();
+	// calendar만들기
+	public void fullCal() {
+		
 	}
+
 }
