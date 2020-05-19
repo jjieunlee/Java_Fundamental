@@ -60,7 +60,7 @@ public class Calendar {
 
 	}
 
-	public int print() {
+	public void print() {
 
 		int totalCount = getCount();
 		int rest = totalCount % 7;
@@ -80,22 +80,7 @@ public class Calendar {
 		} else if (rest == 0) {
 			message = "일요일";
 		}
-		//System.out.println(year + "년 " + month + "월 " + day + "일은 " + message + " 입니다.");
-		return rest;
-	}	
-
-	// calendar만들기(그 달의 1일자 요일 구하기)
-	public void fullCal() {
-		int totalCount=getCount();
-		int first=totalCount-day+1;
-		int count=0;
-		int rest=print();
-		if(rest==1) {
-			System.out.print("\t");
-			count++;
-			System.out.print(count);
-		}
-		
+		 System.out.println(year + "년 " + month + "월 " + day + "일은 " + message + "입니다.");
 	}
 
 }
