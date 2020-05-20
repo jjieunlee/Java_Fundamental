@@ -13,13 +13,13 @@ public class FootNanoStopWatch {
 	}
 
 	public double getElapsedNano() {
-		return (double) (endNanoTime - startNanoTime) / 1000;
+		return (double) (endNanoTime - startNanoTime) / 1000_000_000;
 	}
 
 	public static void main(String[] args) {
 		FootNanoStopWatch f1 = new FootNanoStopWatch();
 		f1.startNanoTime = System.nanoTime();
-		for (int i = 0; i < 20000_000_000l; i++) {
+		for (int i = 0; i < 2000_000_000l; i++) {
 
 		}
 		f1.endNanoTime = System.nanoTime();
