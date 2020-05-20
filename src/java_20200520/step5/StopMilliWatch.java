@@ -1,6 +1,6 @@
-package java_20200520.step4;
+package java_20200520.step5;
 
-public class StopMilliWatch {
+public class StopMilliWatch extends StopWatch{
 	// 밀리세컨드를 관리하기 위한 변수
 	private long startTime;
 	private long endTime;

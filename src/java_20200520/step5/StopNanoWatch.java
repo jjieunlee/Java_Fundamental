@@ -1,6 +1,6 @@
-package java_20200520.step4;
+package java_20200520.step5;
 
-public class StopNanoWatch {
+public class StopNanoWatch extends StopWatch{
 
 	// 나노세컨드를 관리하기 위한 변수
 	private long startTime;
