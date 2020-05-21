@@ -24,7 +24,5 @@ public class StopWatchDemo {
 		Class clazz=Class.forName(readLine);
 		StopWatch s=(StopWatch)clazz.newInstance();
 		run(s);
-		
 	}
-
 }
