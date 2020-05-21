@@ -64,6 +64,10 @@ public class Calendar1 {
 		return isLeafYear;
 	}
 
+	/**
+	 * 요일을  출력해주는 메서드 입니다
+	 */
+	 
 	public void print(int year, int month, int day) {
 		int totalCount = getCount(year, month, day);
 		int dayOfWeek = totalCount % 7;
@@ -85,6 +89,10 @@ public class Calendar1 {
 		}
 		System.out.println(year + "년 " + month + "월 " + day + "일은 " + message + "입니다.");
 	}
+	/**
+	 * 월을  출력해주는 메서드 입니다
+	 */
+	 
 
 	public void print(int year, int month) {
 		System.out.println("일\t월\t화\t수\t목\t금\t토\t");
