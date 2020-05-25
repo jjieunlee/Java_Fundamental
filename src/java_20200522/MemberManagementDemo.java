@@ -37,6 +37,7 @@ public class MemberManagementDemo {
 		}
 	}
 
+	// 완료
 	// 1. 아이디를 입력받는다
 	// 2. 이름을 입력받는다.
 	// 3. ArrayList에 고객을 추가한다.
@@ -66,7 +67,27 @@ public class MemberManagementDemo {
 	// 4. print()메서드 호출
 	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력 받게 함
 	public void update() {
-
+		String updateId = input("수정할 아이디>");
+		String updateName = input("수정할 이름>");
+		if (list.size() == 0) {
+			System.out.println("등록된 id가 없습니다.(리스트가 비었습니다.)");
+		}
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(updateId)) {
+				list.get(i).setName(updateName);
+				System.out.print("수정후 id: " + list.get(i).getId() + "\t");
+				System.out.println("수정후 name" + list.get(i).getName());
+				System.out.println("================================");
+			} else {
+				System.out.println("다시");
+			}
+		}
+		for (Member mem : list) {
+			System.out.printf("아이디 : %s , 이름 : %s\n", mem.getId(), mem.getName());
+		}
+		print();
+		String inputData = input("번호를 선택하세요>");
+		run(inputData);
 	}
 
 	// 1. 삭제할 아이디를 입력받는다.
@@ -76,7 +97,21 @@ public class MemberManagementDemo {
 	// 4. print()메서드 호출
 	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력 받게 함
 	public void delete() {
-
+		String deleteId = input("삭제할 아이디>");
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(deleteId)) {
+				list.remove(i);
+				System.out.println(deleteId + "가 삭제되었습니다. ");
+			} else {
+				System.out.println("삭제할 아이디가 없습니다.");
+			}
+		}
+		for (Member mem : list) {
+			System.out.printf("아이디 : %s , 이름 : %s\n", mem.getId(), mem.getName());
+		}
+		print();
+		String inputData = input("번호를 선택하세요>");
+		run(inputData);
 	}
 
 	// 1. 검색할 아이디를 입력받는다.
@@ -85,6 +120,19 @@ public class MemberManagementDemo {
 	// 4. print()메서드 호출
 	// 5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력 받게 함
 	public void search() {
+		String searchId = input("검색할 아이디>");
+		// Member m=new Member(searchId);
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId().equals(searchId)) {
+				System.out.print("아이디: " + list.get(i).getId() + "\t");
+				System.out.println("이름:" + list.get(i).getName());
+			} else {
+				System.out.println("검색된 결과가 없습니다.");
+			}
+		}
+		print();
+		String inputData = input("번호를 선택하세요>");
+		run(inputData);
 
 	}
 
