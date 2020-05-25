@@ -1,4 +1,4 @@
-package java_home;
+package java_20200522;
 
 import java.util.ArrayList;
 import java.util.Scanner;
