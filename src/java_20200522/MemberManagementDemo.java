@@ -37,7 +37,6 @@ public class MemberManagementDemo {
 		}
 	}
 
-	// 완료
 	// 1. 아이디를 입력받는다
 	// 2. 이름을 입력받는다.
 	// 3. ArrayList에 고객을 추가한다.
