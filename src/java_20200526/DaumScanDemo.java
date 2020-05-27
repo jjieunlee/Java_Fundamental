@@ -28,6 +28,5 @@ public class DaumScanDemo {
 			// bw.newLine();
 			pw.println(readLine);
 		}
-
 	}
 }
