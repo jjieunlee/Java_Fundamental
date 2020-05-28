@@ -30,7 +30,8 @@ public class EchoClient {
 			OutputStreamWriter osw = new OutputStreamWriter(out);
 			// Stream chain
 			BufferedWriter bw = new BufferedWriter(osw);
-			bw.write("안녕하세요 저는 이지은 입니다.");
+			bw.write("Git.exe");
+			//bw.write("안녕하세요 저는 이지은 입니다.");
 			bw.newLine();
 			bw.flush();
 
@@ -42,8 +43,6 @@ public class EchoClient {
 			String readLine = br.readLine();
 			
 			System.out.println("서버 메세지: "+readLine);
-			
-			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
