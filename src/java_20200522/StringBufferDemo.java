@@ -9,6 +9,8 @@ public class StringBufferDemo {
 		// object의 equals()메서드를 사용
 		System.out.println(s1.equals(s2));
 
+		System.out.println(s1.toString().equals(s2.toString()));
+		
 		// StringBUFFER => String : toString()
 		String s3 = s1.toString();
 		String s4 = s2.toString();
