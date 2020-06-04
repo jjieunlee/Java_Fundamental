@@ -39,7 +39,6 @@ public class TransactionDemo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-
 			try {
 				if (isSuccess) {
 					con.commit();// 트랜잭션 끝
@@ -58,6 +57,5 @@ public class TransactionDemo {
 				e.printStackTrace();
 			}
 		}
-
 	}
 }
